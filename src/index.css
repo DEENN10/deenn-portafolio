@@ -1,0 +1,79 @@
+/* Estilos globales inspirados en iPhone UI */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f5f5f5;  /* Gris muy claro, neutro */
+  color: #333;  /* Texto oscuro para contraste */
+}
+
+.App {
+  text-align: center;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #007aff;  /* Azul iPhone sutil */
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Extiende los estilos globales */
+.navbar {
+  background-color: #ffffff;  /* Blanco puro, neutro */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);  /* Sombra ligera para profundidad */
+  transition: all 0.3s ease-in-out;  /* Transición suave al interactuar */
+}
+
+.navbar a {
+  transition: color 0.3s ease;  /* Transición en el color al hover */
+}
+
+.navbar a:hover {
+  color: #0056b3;  /* Azul más oscuro al hover, para un efecto sutil */
+}
+
+.nav-link {
+  display: flex;  /* Alinea el ícono y el texto */
+  align-items: center;
+  gap: 5px;  /* Espacio entre ícono y texto */
+}
+
+/* Estilos adicionales para la sección AboutMe */
+section {
+  transition: all 0.3s ease;  // Transición suave para toda la sección
+}
+
+section:hover {
+  boxShadow: '0 6px 8px rgba(0, 0, 0, 0.15)';  // Sombra más pronunciada al hover para interacción sutil
+}
+
+img {
+  display: block;
+  margin: 0 auto;  // Centra la imagen
+}
+
+section {
+  transition: transform 0.3s ease;
+}
+
+section:hover {
+  transform: translateY(-5px);  /* Efecto de elevación sutil al hover */
+}
+
+/* Estilos para secciones, incluyendo AboutMe y las nuevas secciones */
+section {
+  transition: all 0.3s ease, transform 0.3s ease;  /* Combina las transiciones existentes y nuevas */
+}
+
+section:hover {
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);  /* Sombra más pronunciada, corregido de tu código */
+  transform: translateY(-5px);  /* Efecto de elevación sutil al hover, como sugerí */
+}
