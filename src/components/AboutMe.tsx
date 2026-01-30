@@ -20,11 +20,29 @@ const AboutMe: React.FC = () => {
         onMouseOver={(e) => (e.currentTarget.style.transform = 'scale(1.05)')}  // Efecto de zoom al hover
         onMouseOut={(e) => (e.currentTarget.style.transform = 'scale(1)')}
       />
-      <h2 style={{ color: '#007aff', fontWeight: 'bold' }}>Sobre mí</h2>
-      <p style={{ fontSize: '1.1rem', color: '#333', lineHeight: '1.6' }}>
-        Soy desarrollador Fullstack con experiencia creando aplicaciones web completas y proyectos enfocados en la automatización de procesos y la optimización del tiempo operativo. He trabajado con tecnologías como React, Node.js, Express, MongoDB y MySQL, integrando APIs externas y desarrollando soluciones funcionales y mantenibles.
+      <h2 style={{
+         color: '#007aff',
+         fontWeight: 'bold',
+         textAlign: 'center',
+         fontFamily: 'Arial, sans-serif',
+         fontSize: '2rem',
+         marginBottom: '20px'
+        }}>
+          Sobre mí
+        </h2>
+      <p style={{
+        fontSize: '1.1rem',
+        color: '#333',
+        lineHeight: '1.6',
+        textAlign: 'center',
+        fontFamily: 'Arial-sans-serif',
+        maxWidth: '800px',
+        margin: '0 auto',
+        padding: '0 20px'
+        }}> 
+        Soy desarrollador Fullstack con experiencia creando aplicaciones web completas y proyectos enfocados en la automatización de procesos y la optimización del tiempo operativo. He trabajado con tecnologías como React, Node.js, Express, MongoDB y MySQL, CISCO, integrando APIs externas y desarrollando soluciones funcionales y mantenibles.
 
-        Me adapto con facilidad a nuevos entornos y tecnologías, disfruto aprender constantemente y enfrentar retos técnicos que aporten valor real a los proyectos y a las personas que los utilizan.
+        Me adapto con facilidad a nuevos entornos y tecnologías, disfruto aprender constantemente y enfrentar retos técnicos que aporten valor real a proyectos y a las personas que los utilizan.
       </p>
       <Link to="/info-me">
         <button

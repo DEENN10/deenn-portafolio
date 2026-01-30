@@ -10,7 +10,7 @@ const InfoMe: React.FC = () => {
         textAlign: 'center',
         background: 'linear-gradient(135deg, #f9f9f9 0%, #ffffff 100%)', // Fondo sutilmente degradado para profundidad
         minHeight: '100vh',
-        fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif', // Tipografía iOS-like
+        fontFamily: 'Arial, sans-serif', // Fuente moderna y consistente (cambié de iOS-like a Arial para uniformidad)
         borderRadius: '20px', // Bordes redondeados en el contenedor principal
         boxShadow: '0 2px 10px rgba(0, 0, 0, 0.05)', // Sombra suave
         margin: '0 auto',
@@ -23,12 +23,14 @@ const InfoMe: React.FC = () => {
           marginBottom: '30px',
           fontSize: '2.5rem',
           fontWeight: '300', // Ligero, como en iOS
+          textAlign: 'center', // Asegura centrado
+          fontFamily: 'Arial, sans-serif', // Fuente consistente
           transition: 'color 0.3s ease', // Animación suave
         }}
         onMouseEnter={(e) => (e.currentTarget.style.color = '#0056cc')} // Cambio sutil al hover
         onMouseLeave={(e) => (e.currentTarget.style.color = '#007aff')}
       >
-        Más Información Sobre Mí
+        Un poco más Sobre Mí
       </h1>
 
       {/* Espacio para la imagen - estilo card iOS */}
@@ -64,15 +66,17 @@ const InfoMe: React.FC = () => {
         />
       </div>
 
-      {/* Espacio para texto más largo - con estilo iOS */}
+      {/* Espacio para texto más largo - con estilo mejorado */}
       <p
         style={{
           fontSize: '1.2rem',
           color: '#333', // Gris oscuro para legibilidad
           lineHeight: '1.7',
-          maxWidth: '800px',
-          margin: '0 auto',
+          maxWidth: '800px', // Limita ancho para legibilidad
+          margin: '0 auto', // Centra el párrafo
           padding: '20px',
+          textAlign: 'center', // Centra el texto dentro del párrafo
+          fontFamily: 'Arial, sans-serif', // Fuente consistente
           backgroundColor: '#ffffff',
           borderRadius: '15px',
           boxShadow: '0 2px 8px rgba(0, 0, 0, 0.05)',
@@ -81,13 +85,13 @@ const InfoMe: React.FC = () => {
         onMouseEnter={(e) => (e.currentTarget.style.boxShadow = '0 4px 16px rgba(0, 0, 0, 0.1)')}
         onMouseLeave={(e) => (e.currentTarget.style.boxShadow = '0 2px 8px rgba(0, 0, 0, 0.05)')}
       >
-         Soy desarrollador Fullstack con formación en Ingeniería en Sistemas Computacionales y experiencia desarrollando aplicaciones web completas, desde interfaces de usuario claras y responsivas hasta la implementación de lógica backend, integración de APIs y gestión de bases de datos.
+         Soy desarrollador Fullstack con enfoque backend y formación en Ingeniería en Sistemas Computacionales. Me gusta usar el código para resolver problemas reales, especialmente aquellos relacionados con procesos manuales, tareas repetitivas y sistemas que pueden hacerse más simples y eficientes.
 
-         He participado en proyectos comerciales y académicos enfocados en resolver problemas reales, principalmente mediante la automatización de procesos, la reducción de errores y la optimización del tiempo de trabajo. Entre mis proyectos se encuentran un chatbot de reservas para barberías, un sistema de generación automática de PDFs y aplicaciones web fullstack con arquitectura cliente-servidor.
+        Disfruto crear soluciones pensadas para personas no técnicas, donde la tecnología realmente ahorre tiempo y reduzca errores. Por eso, gran parte de mis proyectos están orientados a la automatización, como chatbots de reservas y sistemas de generación automática de documentos.
 
-         Trabajo con tecnologías como React, Node.js, Express, MongoDB y MySQL, además de la integración de servicios externos como Google Calendar API y WhatsApp Web API. Me enfoco en escribir código limpio, organizado y mantenible, aplicando buenas prácticas y control de versiones.
+        Me interesa construir sistemas bien estructurados, claros y fáciles de mantener, priorizando soluciones prácticas sobre la complejidad innecesaria.
 
-         Me caracterizo por mi capacidad de adaptación y aprendizaje continuo; puedo integrarme a nuevos entornos tecnológicos con rapidez y aprender nuevas herramientas según las necesidades del proyecto. Actualmente busco oportunidades como Frontend, Backend o Fullstack Developer, donde pueda seguir creciendo profesionalmente y aportar soluciones prácticas desde el primer día.
+        Soy una persona autodidacta, analítica y comunicativa, con facilidad para entender problemas, proponer soluciones y tomar iniciativa cuando el proyecto lo requiere. Actualmente busco oportunidades donde pueda seguir creciendo profesionalmente y aportar valor real desde el inicio.
       </p>
 
       <Link to="/">

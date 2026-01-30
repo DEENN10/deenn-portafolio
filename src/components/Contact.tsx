@@ -64,8 +64,8 @@ const Contact: React.FC = () => {
 
     try {
       const result = await emailjs.send(
-        'service_328u5af', // Reemplaza con tu Service ID real
-        'template_3ct6crt', // Reemplaza con tu Template ID real
+        'service_k3chjqg', // Reemplaza con tu Service ID real
+        'template_78516xj', // Reemplaza con tu Template ID real
         {
           nombre: formData.name,
           email: formData.email,

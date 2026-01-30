@@ -14,11 +14,11 @@ const ProjectTD: React.FC = () => {
 
   // Array de elementos
   const galleryItems = [
-    { type: 'image', src: imgTD1, text: 'Estructura de Archivos: Organización de archivos en el sistema.' },
-    { type: 'image', src: imgTD2, text: 'Estructura de Carpetas: Jerarquía de directorios.' },
-    { type: 'image', src: imgTD3, text: 'Login del Sistema: Pantalla de autenticación.' },
-    { type: 'image', src: imgTD4, text: 'Resultados 5-15: Procesamiento de datos en rango bajo.' },
-    { type: 'image', src: imgTD5, text: 'Resultados 15-5: Procesamiento de datos en rango alto.' },
+    { type: 'image', src: imgTD3, text: 'Login del Sistema: Pantalla principal donde se muestra los campos principales del Sistema como la fecha, numero de items y un teclado numerico rapido.' },
+    { type: 'image', src: imgTD4, text: 'Resultados 5-15: Procesamiento de datos mediante coordenadas en rango bajo del formato.' },
+    { type: 'image', src: imgTD5, text: 'Resultados 15-5: Procesamiento de datos mediante coordenadas en rango alto del formato.' },
+    { type: 'image', src: imgTD2, text: 'Estructura de Carpetas: Muestra la carpeta "output" creada por defecto dentro del proyecto para los resultados finales (PDF).' },
+    { type: 'image', src: imgTD1, text: 'Estructura de Archivos: Organizacion y composicion de los componentes utilizados para la realizacion del sistema.' },
   ];
 
   const nextItem = () => setCurrentIndex((prev) => (prev + 1) % galleryItems.length);

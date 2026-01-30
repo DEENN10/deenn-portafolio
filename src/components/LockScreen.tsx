@@ -42,10 +42,9 @@ const LockScreen: React.FC<LockScreenProps> = ({ onUnlock }) => {
             zIndex: 1,
           }}
         >
-          <h1 style={{ color: '#ffffff', fontSize: '2.5rem', margin: '0 0 10px 0' }}>Roberto Gonzalez</h1>
-          <h1 style={{ color: '#0c37faff', fontSize: '2.0rem', margin: '0 0 10px 0' }}>Ingeniero en Sistemas Computacionales.</h1>
-          <h2 style={{ color: '#ffffff', fontSize: '1.5rem', margin: '0 0 20px 0' }}>Desarrollador Full Stack</h2>
-          <p style={{ color: '#ffffff', fontSize: '1.2rem', margin: '0' }}>Toca para desbloquear</p>
+          <h1 style={{ color: '#ffffff', fontSize: '1.7rem', margin: '0 0 10px 0' }}>Roberto Gonzalez</h1>
+          <h1 style={{ color: '#0c37faff', fontSize: '2.0rem', margin: '0 0 10px 0' }}>Ing en Sistemas Computacionales.</h1>
+          <p style={{ color: '#ffffff', fontSize: '1.0rem', margin: '0' }}>Toca para desbloquear</p>
         </div>
       </div>
     </div>

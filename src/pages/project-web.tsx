@@ -17,12 +17,12 @@ const ProjectWeb: React.FC = () => {
 
   // Array de elementos: incluye el video con URL pública
   const galleryItems = [
-    { type: 'image', src: imgWeb1, text: 'Inicio de página: Página principal con navegación y hero section.' },
-    { type: 'image', src: imgWeb2, text: 'Blog: Sección de artículos y noticias de la empresa.' },
-    { type: 'image', src: imgWeb3, text: 'Contacto: Formulario para consultas y datos de contacto.' },
-    { type: 'image', src: imgWeb4, text: 'Correo: Integración de envío de correos electrónicos.' },
-    { type: 'image', src: imgWeb5, text: 'Estructura: Arquitectura general de la página web.' },
-    { type: 'video', src: demoVideo, text: 'Demo final: Video completo de la página en funcionamiento (51 segundos).' },
+    { type: 'image', src: imgWeb1, text: 'Pagina principal: Inicio de la pagina, se muestra un carrusel con el nombre de la empresa y la barra de navegacion principal.' },
+    { type: 'image', src: imgWeb2, text: 'Blog: Agregamos una Sección de artículos y noticias de la empresa donde se publican las inspecciones anuales realizadas a toda la Republica Mexicana.' },
+    { type: 'image', src: imgWeb3, text: 'Contacto: Formulario funcional para consultas y datos de contacto para la solicitud del servicio, asi como un mapa que muestra la ubucacion especifica de la empresa.' },
+    { type: 'image', src: imgWeb4, text: 'Correo: Integración de envío de correos electrónicos funcional por medio del sitio web.' },
+    { type: 'image', src: imgWeb5, text: 'Estructura: Arquitectura general de la página web responsiva divida en componentes, paginas etc. Manteninendo una estructura profesional y legible' },
+    { type: 'video', src: demoVideo, text: 'Demo final: Video completo de la página en funcionamiento.' },
   ];
 
   const nextItem = () => setCurrentIndex((prev) => (prev + 1) % galleryItems.length);

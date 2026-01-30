@@ -10,6 +10,7 @@ import ProjectChatbot from './pages/project-chatbot';  // Importa las nuevas pá
 import ProjectWeb from './pages/project-web';
 import ProjectTD from './pages/project-TD';
 import Contact from './components/Contact'; 
+import TechStack from './components/TechStack';
 
 
 // Imágenes de portada (usando imports normales)
@@ -59,10 +60,11 @@ return (
 <>
 <Navbar />
 <AboutMe />
+<TechStack />
 
 
         {/* Sección de Proyectos */}
-        <section id="frontend" style={{ padding: '40px 20px', backgroundColor: '#f9f9f9', margin: '20px 0', borderRadius: '10px', boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)', transition: 'all 0.3s ease' }}>
+        <section id="proyecto" style={{ padding: '40px 20px', backgroundColor: '#f9f9f9', margin: '20px 0', borderRadius: '10px', boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)', transition: 'all 0.3s ease' }}>
           <h2 style={{ textAlign: 'center', color: '#007aff' }}>Mis Proyectos</h2>
           <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '20px' }}>
             <ProjectCard
