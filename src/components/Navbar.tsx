@@ -1,6 +1,8 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { FaHome, FaCode, FaTools, FaEnvelope } from 'react-icons/fa';
+import StaggeredMenu from './StaggeredMenu';
+
 
 const Navbar: React.FC = () => {
   const handleScroll = (id: string) => {
@@ -21,9 +23,7 @@ const Navbar: React.FC = () => {
     <nav className="navbar navbar-expand-lg navbar-light bg-light shadow-sm" style={{ borderRadius: '10px', margin: '10px' }}>
       <div className="container-fluid">
         <a className="navbar-brand" href="#inicio" onClick={(e) => { e.preventDefault(); handleScroll('inicio'); }} style={{ fontWeight: 'bold', color: '#555' }}>DEENN DEV.</a>
-        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span className="navbar-toggler-icon"></span>
-        </button>
+        
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav ms-auto">
             <li className="nav-item">
@@ -40,7 +40,11 @@ const Navbar: React.FC = () => {
             </li>
           </ul>
         </div>
-      </div>
+
+        <div className="d-lg-none">
+          <StaggeredMenu />
+        </div>
+      </div>  
     </nav>
   );
 };

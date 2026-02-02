@@ -6,6 +6,7 @@ import './Contact.css'; // Asegúrate de que sea Contact.css con mayúscula
 interface ContactForm {
   name: string;
   email: string;
+  phone: string; // Agregado
   message: string;
 }
 
@@ -14,6 +15,7 @@ const Contact: React.FC = () => {
   const [formData, setFormData] = useState<ContactForm>({
     name: '',
     email: '',
+    phone: '', // Agregado
     message: '',
   });
   const [errors, setErrors] = useState<{ [key: string]: string }>({});
@@ -31,6 +33,9 @@ const Contact: React.FC = () => {
         newErrors.email = 'Email es requerido.';
       } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
         newErrors.email = 'Email inválido.';
+      }
+      if (formData.phone && formData.phone.length < 8) {
+        newErrors.phone = 'Teléfono debe tener al menos 8 dígitos.';
       }
     } else if (step === 1) {
       if (!formData.message.trim()) {
@@ -65,10 +70,11 @@ const Contact: React.FC = () => {
     try {
       const result = await emailjs.send(
         'service_k3chjqg', // Reemplaza con tu Service ID real
-        'template_78516xj', // Reemplaza con tu Template ID real
+        'template_78516xj', // Reemplaza con tu Template ID real (agrega {{telefono}} en tu template de EmailJS)
         {
           nombre: formData.name,
           email: formData.email,
+          telefono: formData.phone || 'No proporcionado', // Agregado
           mensaje: formData.message,
           fecha: new Date().toLocaleString('es-MX'),
         }
@@ -76,7 +82,7 @@ const Contact: React.FC = () => {
 
       console.log('Email enviado:', result.text);
       setShowAlert({ type: 'success', message: '¡Mensaje enviado exitosamente! Te responderé pronto.' });
-      setFormData({ name: '', email: '', message: '' });
+      setFormData({ name: '', email: '', phone: '', message: '' }); // Agregado phone
       setCurrentStep(0);
       setTimeout(() => setShowAlert(null), 5000);
     } catch (error) {
@@ -93,7 +99,7 @@ const Contact: React.FC = () => {
       title: 'Información Básica',
       content: (
         <div>
-          <label>Nombre:</label>
+          <label>Nombre(s):</label>
           <input
             type="text"
             value={formData.name}
@@ -117,6 +123,17 @@ const Contact: React.FC = () => {
             className={errors.email ? 'error' : ''}
           />
           {errors.email && <span className="error-text">{errors.email}</span>}
+          <label>Teléfono (Opcional):</label> {/* Agregado */}
+          <input
+            type="tel"
+            value={formData.phone}
+            onChange={(e) => {
+              setFormData({ ...formData, phone: e.target.value });
+              if (errors.phone) setErrors({ ...errors, phone: '' });
+            }}
+            className={errors.phone ? 'error' : ''}
+          />
+          {errors.phone && <span className="error-text">{errors.phone}</span>}
         </div>
       ),
     },
@@ -147,6 +164,7 @@ const Contact: React.FC = () => {
           <p>Revisa tus datos:</p>
           <p><strong>Nombre:</strong> {formData.name}</p>
           <p><strong>Email:</strong> {formData.email}</p>
+          <p><strong>Teléfono:</strong> {formData.phone || 'No proporcionado'}</p> {/* Agregado */}
           <p><strong>Mensaje:</strong> {formData.message}</p>
           {showAlert && (
             <div className={`alert ${showAlert.type}`}>

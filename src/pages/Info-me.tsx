@@ -75,7 +75,7 @@ const InfoMe: React.FC = () => {
           maxWidth: '800px', // Limita ancho para legibilidad
           margin: '0 auto', // Centra el párrafo
           padding: '20px',
-          textAlign: 'center', // Centra el texto dentro del párrafo
+          textAlign: 'justify', // Centra el texto dentro del párrafo
           fontFamily: 'Arial, sans-serif', // Fuente consistente
           backgroundColor: '#ffffff',
           borderRadius: '15px',

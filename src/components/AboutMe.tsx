@@ -28,7 +28,7 @@ const AboutMe: React.FC = () => {
          fontSize: '2rem',
          marginBottom: '20px'
         }}>
-          Sobre mí
+          Sobre mí...
         </h2>
       <p style={{
         fontSize: '1.1rem',
