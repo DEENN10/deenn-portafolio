@@ -48,16 +48,16 @@ p {
 
 /* Estilos adicionales para la sección AboutMe */
 section {
-  transition: all 0.3s ease;  // Transición suave para toda la sección
+  transition: all 0.3s ease; 
 }
 
 section:hover {
-  boxShadow: '0 6px 8px rgba(0, 0, 0, 0.15)';  // Sombra más pronunciada al hover para interacción sutil
+  box-Shadow: '0 6px 8px rgba(0, 0, 0, 0.15)';
 }
 
 img {
   display: block;
-  margin: 0 auto;  // Centra la imagen
+  margin: 0 auto;  
 }
 
 section {
