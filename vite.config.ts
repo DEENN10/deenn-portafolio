@@ -6,3 +6,4 @@ export default defineConfig({
   base: '/deenn-portafolio/',
   plugins: [react()],
 })
+
