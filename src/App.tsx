@@ -1,4 +1,4 @@
-import React from 'react';
+import { useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import './App.css';
 import Navbar from './components/Navbar';
@@ -45,7 +45,7 @@ import imgTD5 from './assets/img-TD/resultado15-5.png';
 
 
 function App() {
-const [isUnlocked, setIsUnlocked] = React.useState(false);
+const [isUnlocked, setIsUnlocked] = useState(false);
 
 
 if (!isUnlocked) {
